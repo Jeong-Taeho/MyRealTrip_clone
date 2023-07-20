@@ -15,7 +15,14 @@
 		height: 230px;
 		justify-items: center;
 		align-items: center;
-		box-sizing: border-box;
+
+		@include media(mobile) {
+			width: auto;
+			height: auto;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+			align-items: start;
+		}
 
 		& .footer__left {
 			height: 198px;
@@ -43,16 +50,25 @@
 		& .footer__introduce {
 			height: 198px;
 			@include footerItem;
+			@include media(mobile) {
+				display: none;
+			}
 		}
 
 		& .footer__partner {
 			height: 198px;
 			@include footerItem;
+			@include media(mobile) {
+				display: none;
+			}
 		}
 
 		& .footer__support {
 			height: 198px;
 			@include footerItem;
+			@include media(mobile) {
+				display: none;
+			}
 		}
 	}
 }

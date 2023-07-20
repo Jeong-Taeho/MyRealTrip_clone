@@ -4,6 +4,10 @@
 	width: 1060px;
 	margin: 0 auto;
 
+	@include media(mobile) {
+		margin-left: 20px;
+	}
+
 	& .main-item-container__title--h1 {
 		@include fontStyle($weight: 700, $size: 24px);
 	}
