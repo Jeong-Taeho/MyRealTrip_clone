@@ -53,6 +53,7 @@
 	);
 
 	@media all and (max-width: map.get($breakpoint, $name)) {
+		transition: all 0.5s;
 		@content;
 	}
 }
