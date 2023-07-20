@@ -50,7 +50,6 @@
 @mixin media($name) {
 	$breakpoint: (
 		mobile: 576px,
-		tablet: 992px,
 	);
 
 	@media all and (max-width: map.get($breakpoint, $name)) {
