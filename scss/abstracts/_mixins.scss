@@ -1,0 +1,59 @@
+@use "sass:map";
+
+@mixin itemContent($display: flex, $w: 1060px, $gap: 20px) {
+	display: $display;
+	width: $w;
+	gap: $gap;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+@mixin fontStyle($size: 12px, $weight: 600, $color: null) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+}
+
+@mixin iconStyle($index) {
+	& :nth-child(#{$index}) i {
+		display: block;
+		font-size: 36px;
+		margin-bottom: 12px;
+		@if $index == 1 {
+			color: #1c4b9b;
+		} @else if $index == 2 {
+			color: black;
+		} @else {
+			color: #2d78f0;
+		}
+	}
+}
+
+@mixin footerItem {
+	display: flex;
+	flex-direction: column;
+	color: #666d75;
+	& span {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	& a {
+		text-decoration: none;
+		padding: 8px 0;
+		font-size: 14px;
+		color: inherit;
+	}
+}
+
+@mixin media($name) {
+	$breakpoint: (
+		mobile: 576px,
+		tablet: 992px,
+	);
+
+	@media all and (max-width: map.get($breakpoint, $name)) {
+		@content;
+	}
+}
