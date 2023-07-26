@@ -5,8 +5,7 @@
 → 자바스크립트 프로그램에 이슈가 존재한다면 문법 오류가 아니더라도 타입 체커에서 지적당할 가능성이 높다.
 → 문법의 유효성과 동작의 이슈는 `독립적인 문제`
 
-
-![](https://velog.velcdn.com/images/nabi5986/post/e6304a05-5a03-470e-9226-f5bcecf5488f/image.png)
+<img src="https://velog.velcdn.com/images/nabi5986/post/e6304a05-5a03-470e-9226-f5bcecf5488f/image.png" width="450px" height="300px" alt="typescript"></img>
 
 > 모든 자바스크립트는 타입스크립트이지만, 모든 타입스크립트가 자바스크립트는 아니다! `.js` 파일에 있는 코드는 이미 타입스크립트라고 할 수 있기 때문에 JS -> TS로 마이그레이션하는 데 엄청난 이점이 된다.
 
